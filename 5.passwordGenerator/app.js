@@ -14,5 +14,23 @@ const allCheckBox = document.querySelector("input[type=checkbox]");
 
 
 let password = "";
-let passwordLenght = 10;
+let passwordLenght = 15;
 let checkCount = 1;
+
+handleSlider()
+
+
+
+function handleSlider(){
+    inputSlider.value = passwordLenght;
+    lenghtDisplay.innerText = passwordLenght;
+}
+
+function setIndicator(){
+    indicator.style.backgroundColor = color;
+    // shadow
+}
+
+function randInt(){
+    return Math.floor(Math.random()*(max-min)+min);
+}
