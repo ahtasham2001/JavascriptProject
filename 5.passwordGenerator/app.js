@@ -70,3 +70,18 @@ function calcStrenght(){
     }
 
 }
+
+async function copyContent(){
+    try {
+        await navigator.clipboard.writeText(passwordDisplay.value);
+        copyMsg.innerText = "Copied"
+    }
+    catch(e){
+        copyMsg.innerText = "Failed";
+    }
+    copyMsg,classList.add("active");
+
+    setTimeout( ()=>{
+        copyMsg.classList.remove("active");
+    },2000)
+}
