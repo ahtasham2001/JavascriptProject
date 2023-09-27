@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="wrapper">
         <h1>Weather App</h1>
@@ -31,8 +33,51 @@
                     <img src="Assets/search.png" width="20" height="20" loading="lazy">
                 </button>
             </form>
+
+            <!-- loading screen container -->
+            <div class="loading-container">
+                <img src="Assets/loading.gif" width="150" height="150">
+                <p>Loading</p>
+            </div>
+            <!-- show weather info -->
+            <div class="user-info-container">
+                <!-- city name and flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+                <!-- weather description -->
+                <p data-weatherDesc></p>
+                <!-- weather icon -->
+                <img data-weatherIcon>
+                <!-- temperature -->
+                <p data-temp></p>
+
+                <!-- 3 cards - parameters -->
+                <div class="parameter-container">
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="Assets/wind.png">
+                        <p>WindSpeed</p>
+                        <p data-windspeed></p>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="parameter">
+                        <img src="Assets/humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="parameter">
+                        <img src="Assets/cloud.png">
+                        <p data-cloud>Clouds</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
